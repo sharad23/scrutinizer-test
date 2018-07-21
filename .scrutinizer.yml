@@ -1,0 +1,22 @@
+checks:
+    python:
+        code_rating: true
+        duplicate_code: true
+
+build:
+  nodes:
+    my-tests-with-coverage:
+      tests:
+        override:
+          - command: './run-tests.sh'
+            coverage:
+              file: '.coverage'
+              config_file: '.coveragerc'
+              format: 'py-cc'
+    tests: true
+
+filter:
+    excluded_paths:
+        - '*/test/*'
+    dependency_paths:
+        - 'lib/*'
