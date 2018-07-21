@@ -9,10 +9,7 @@ build:
       tests:
         override:
           - command: './run_test.sh'
-            coverage:
-              file: '.coverage'
-              config_file: '.coveragerc'
-              format: 'py-cc'
+
     tests: true
 
 filter:
